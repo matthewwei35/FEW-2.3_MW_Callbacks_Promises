@@ -14,6 +14,12 @@ navigator.geolocation(success, error, options)
 
 Look at the example code and test it. 
 
+Read up on `navigator.geolocation.getCurrentPosition()`: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition
+
+**Important!** The geolocation api only works with an HTTPS connection. If you run this locally from the desktop or with liveserver it will be run on an HTTP connection and will throw an error! 
+
+You can solve this by running it in your React project. Follow the instructions in the video tutorials about running the Create React App project with HTTPS. 
+
 **Challenge!** This implementation is awkward! It would be better handled with a Promise! 
 
 Your goal is write a function that returns a Promise! You should be able to call it like this: 
