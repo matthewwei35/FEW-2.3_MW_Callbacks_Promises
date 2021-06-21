@@ -1,12 +1,23 @@
 function whatToEat(timeOfDay) {
-  // Create a new promise and return it here
-  
+  return new Promise((resolve, reject) => {
+    if (timeOfDay === 'breakfast') {
+      resolve('Toast')
+    } else if (timeOfDay === 'lunch') {
+      resolve('Noodles')
+    } else if (timeOfDay === 'dinner') {
+      resolve('Curry')
+    } else {
+      reject('Not hungry right now.')
+    }
+  })
 }
 
 
 // Call yout function and resolve the promise here! 
 whatToEat('lunch')
-
+.then(food => console.log(food))
+.catch(err => console.log(err))
+.finally(() => console.log('All done!'))
 
 // If the `timeOfDay` is 'breakfast', 'lunch', or 'dinner' 
 // resolve the promise with your favorite food for that time. 

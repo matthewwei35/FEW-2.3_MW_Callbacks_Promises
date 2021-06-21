@@ -14,7 +14,24 @@ function asyncNumberChecker(n) {
 // to handle the promise in the function calls below. 
 // Handle success with .then() and errors with .catch()
 
-asyncNumberChecker(10)
+const numCheck1 = asyncNumberChecker(10)
+
+numCheck1.then((message) => {
+  console.log(message)
+}).catch((err) => {
+  console.log(err)
+}).finally(() => {
+  console.log('All done!')
+});
 
 
-asyncNumberChecker(5)
+const numCheck2 = asyncNumberChecker(5)
+
+numCheck2.then((message) => {
+  console.log(message)
+}).catch((err) => {
+  console.log(err)
+}).finally(() => {
+  console.log('All done!')
+});
+

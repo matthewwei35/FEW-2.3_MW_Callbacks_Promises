@@ -1,7 +1,6 @@
-// Make a new Promise
 const p = new Promise((resolve, reject) => {
   setTimeout(() => {
-    // reject("--- Oops ---");
+    reject("--- Oops ---");
     resolve('>>> Success! <<<');
   }, 2000);
 });
@@ -12,6 +11,8 @@ p.then((message) => {
 }).catch((err) => {
   console.log('Promise rejected 😞');
   console.log(err);
+}).finally(() => {
+  console.log('All done!')
 });
 
 // **Problems to solve**
